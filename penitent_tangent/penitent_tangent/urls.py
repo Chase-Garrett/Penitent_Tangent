@@ -16,8 +16,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import include, path
+from bot.views import IndexView, ResultsView
 
 urlpatterns = [
     path('', include("bot.urls")),
     path('admin/', admin.site.urls),
+    path('results/<int:pk>/', ResultsView.as_view(), name='results')
 ]
