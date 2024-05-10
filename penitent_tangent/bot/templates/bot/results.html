@@ -1,0 +1,15 @@
+{% load static %}
+
+<h1> Penitent Tangent </h1>
+<h2> Results </h2>
+
+<body>
+  {% if object %}
+    <p>Subreddit: {{ object.subreddit }}</p>
+    <p>Positive: {{ object.positive }}</p>
+    <p>Neutral: {{ object.neutral }}</p>
+    <p>Negative: {{ object.negative }}</p>
+  {% else %}
+    <p>No Results found.</p>
+  {% endif %}
+</body>
